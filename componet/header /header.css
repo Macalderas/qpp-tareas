@@ -1,0 +1,19 @@
+.header {
+    height: 7rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0073e6; 
+    padding: 0 2.5rem; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+    border-bottom: 2px solid #005bb5; 
+}
+
+.header img {
+    width: 3.5rem; 
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
