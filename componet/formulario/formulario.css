@@ -1,0 +1,27 @@
+.partes_Formulario {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    background: #f8f5f5;
+    position: fixed;
+    bottom: 0;
+}
+
+.partes_Formulario-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    background: #f2eded;
+}
+
+.partes_Formulario-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #2d2929;
+    color: #fff;
+    font-weight: bold;
+}
