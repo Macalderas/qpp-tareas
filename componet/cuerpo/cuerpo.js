@@ -1,24 +1,26 @@
-
-function cuerpo( descripcion) {
+function cuerpo(descripcion) {
   let div = document.createElement('div');
   div.className = "cuerpo";
 
-  let boton = document.createElement('div');
-  boton.className = "Boton";
-  boton.addEventListener("click", function () {
-    boton.classList.toggle("activo"); 
-  });
+  // Crear un checkbox en lugar de un botón
+  let checkbox = document.createElement('input');
+  checkbox.type = "checkbox";
+  checkbox.className = "checkbox-tarea";
 
-  div.appendChild(boton);
+  // Crear un label para envolver el checkbox y el texto
+  let label = document.createElement('label');
+  label.className = "contenedor-tarea";
 
-   let content = document.createElement('div');
+  // Crear un span para el texto de la tarea
+  let span = document.createElement('span');
+  span.textContent = descripcion;
 
-  
-  let p = document.createElement('p');
-  p.textContent = descripcion;
-  content.appendChild(p);
+  // Añadir el checkbox y el texto al label
+  label.appendChild(checkbox);
+  label.appendChild(span);
 
-  div.appendChild(content);
+  // Añadir el label al div principal
+  div.appendChild(label);
 
   return div;
 }
