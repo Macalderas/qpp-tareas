@@ -3,7 +3,7 @@ import { cuerpo } from "./componet/cuerpo/cuerpo.js"
 import {footer} from  "./componet/formulario/formulario.js"
 
 let DOM =document.getElementById("root")
-
+function cargarDOM(){
 DOM.appendChild(crearHeader());
 DOM.appendChild(cuerpo("Create icons for a dashboard")); 
 DOM.appendChild(cuerpo("Prepare a design presentation.")); 
@@ -14,3 +14,6 @@ DOM.appendChild(cuerpo("Water indoor plants"));
 
 
 DOM.appendChild(footer());
+}
+
+cargarDOM();
