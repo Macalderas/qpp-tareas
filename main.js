@@ -1,19 +1,13 @@
-import { crearHeader } from "./componet/header /header.js"
-import { cuerpo } from "./componet/cuerpo/cuerpo.js"
-import {footer} from  "./componet/formulario/formulario.js"
+import {crearHeader} from "./componet/header /header.js"
+import { cargarFormularioLogin } from "./componet/login/login.js";
+import {cargarContenidoPrincipal} from "./componet/tareas/principal.js"
 
-let DOM =document.getElementById("root")
-function cargarDOM(){
-DOM.appendChild(crearHeader());
-DOM.appendChild(cuerpo("Create icons for a dashboard")); 
-DOM.appendChild(cuerpo("Prepare a design presentation.")); 
-DOM.appendChild(cuerpo("Stretch for 15 minutes"));
-DOM.appendChild(cuerpo("Plan your meal")); 
-DOM.appendChild(cuerpo("Review daily goals before sleeping. Add some new if time permits")); 
-DOM.appendChild(cuerpo("Water indoor plants")); 
-
-
-DOM.appendChild(footer());
+function iniciarAplicacion() {
+    const root = document.getElementById("root");
+    root.innerHTML = ""; 
+    root.appendChild(crearHeader());
+    cargarFormularioLogin(root, cargarContenidoPrincipal);
 }
 
-cargarDOM();
+
+iniciarAplicacion();    
